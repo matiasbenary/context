@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <CartContext.Provider value={(cart, addCart)}>
+    <CartContext.Provider value={{ cart, addCart }}>
       <UserContext.Provider value={value}>
         <Layout usuario={usuario}>
           <Routes>
