@@ -1,3 +1,5 @@
+import { useContext } from "react";
+
 import { CheckIcon } from "@chakra-ui/icons";
 import {
   Box,
@@ -11,8 +13,13 @@ import {
 } from "@chakra-ui/react";
 
 import Button from "../../Components/Button";
+import CartContext from "../../Context/CartContext";
+import UserContext from "../../Context/UserContext";
 
-const Home = ({ usuario }) => {
+const Home = () => {
+  const { addCart } = useContext(CartContext);
+  const { usuario } = useContext(UserContext);
+
   return (
     <Center py={6}>
       <Box
@@ -75,6 +82,7 @@ const Home = ({ usuario }) => {
             rounded={"xl"}
             boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
             isVip={usuario.isVip}
+            onClick={addCart}
           >
             Start your trial
           </Button>

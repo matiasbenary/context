@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 
 import {
   Box,
@@ -13,8 +13,10 @@ import {
 } from "@chakra-ui/react";
 
 import Button from "../../Components/Button";
+import UserContext from "../../Context/UserContext";
 
-const Config = ({ usuario, setUsuario }) => {
+const Config = () => {
+  const { usuario, setUsuario } = useContext(UserContext);
   const [email, setEmail] = useState(usuario.email);
   return (
     <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>

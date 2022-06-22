@@ -7,8 +7,8 @@ const Products = () => {
   console.log(cart);
   return (
     <div>
-      {cart.map((product) => (
-        <div>
+      {cart.map((product, index) => (
+        <div key={index}>
           {product.name} - {product.price}
         </div>
       ))}

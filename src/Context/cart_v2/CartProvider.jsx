@@ -1,6 +1,6 @@
-import { createContext, useState } from "react";
+import { useState } from "react";
 
-const CartContext = createContext();
+import CartContext from "./CartContext";
 
 export const CartProvider = ({ children }) => {
   // cart context
@@ -21,5 +21,3 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
   );
 };
-
-export default CartContext;
