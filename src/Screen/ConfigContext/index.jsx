@@ -42,9 +42,7 @@ const ConfigContext = () => {
             />
           </FormControl>
           <Stack spacing={10}>
-            <Button isVip={usuario.isVip} onClick={() => editEmail(email)}>
-              Sign in
-            </Button>
+            <Button onClick={() => editEmail(email)}>Sign in</Button>
           </Stack>
         </Stack>
       </Box>

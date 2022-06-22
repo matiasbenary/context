@@ -21,6 +21,7 @@ import { NavLink as ReachLink } from "react-router-dom";
 const Links = [
   { label: "Inicio", url: "/" },
   { label: "Configuracion", url: "/config" },
+  { label: "Carrito", url: "/products" },
 ];
 
 const NavLink = ({ text, link }) => {

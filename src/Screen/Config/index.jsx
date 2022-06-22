@@ -42,10 +42,7 @@ const Config = () => {
             />
           </FormControl>
           <Stack spacing={10}>
-            <Button
-              isVip={usuario.isVip}
-              onClick={() => setUsuario({ ...usuario, email })}
-            >
+            <Button onClick={() => setUsuario({ ...usuario, email })}>
               Sign in
             </Button>
           </Stack>

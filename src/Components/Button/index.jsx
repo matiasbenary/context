@@ -6,6 +6,7 @@ import UserContext from "../../Context/UserContext";
 
 const Button = ({ ...props }) => {
   const { usuario } = useContext(UserContext);
+
   return (
     <ButtonChakra colorScheme={usuario.isVip ? "gray" : "green"} {...props}>
       {props.children}

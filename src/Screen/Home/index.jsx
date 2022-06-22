@@ -14,11 +14,9 @@ import {
 
 import Button from "../../Components/Button";
 import CartContext from "../../Context/CartContext";
-import UserContext from "../../Context/UserContext";
 
 const Home = () => {
   const { addCart } = useContext(CartContext);
-  const { usuario } = useContext(UserContext);
 
   return (
     <Center py={6}>
@@ -81,7 +79,6 @@ const Home = () => {
             w={"full"}
             rounded={"xl"}
             boxShadow={"0 5px 20px 0px rgb(72 187 120 / 43%)"}
-            isVip={usuario.isVip}
             onClick={addCart}
           >
             Start your trial
